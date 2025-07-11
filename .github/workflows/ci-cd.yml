@@ -60,7 +60,7 @@ jobs:
     env:
       PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
       REGION: southamerica-east1
-      SERVICE: tormentator-front-homolog
+      SERVICE: tormentator-front
     steps:
       - uses: actions/download-artifact@v4
         with: { name: image-tag }
