@@ -60,12 +60,13 @@ jobs:
     env:
       PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
       REGION: southamerica-east1
-      SERVICE: tormentator-front
+      REPOSITORY: tormentator-front
+      SERVICE: tormentator-front-homolog
     steps:
       - uses: actions/download-artifact@v4
         with: { name: image-tag }
       - name: Definir REPO
-        run: echo "REPO=${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/tormentator-front/${{ env.SERVICE }}" >> $GITHUB_ENV
+        run: echo "REPO=${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/tormentator-front/${{ env.REPOSITORY }}" >> $GITHUB_ENV
       - name: Obter TAG
         run: echo "TAG=$(cat tag.txt)" >> $GITHUB_ENV
       - uses: google-github-actions/auth@v2
@@ -93,12 +94,13 @@ jobs:
     env:
       PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
       REGION: southamerica-east1
+      REPOSITORY: tormentator-front
       SERVICE: tormentator-front
     steps:
       - uses: actions/download-artifact@v4
         with: { name: image-tag }
       - name: Definir REPO
-        run: echo "REPO=${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/tormentator-front/${{ env.SERVICE }}" >> $GITHUB_ENV
+        run: echo "REPO=${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/tormentator-front/${{ env.REPOSITORY }}" >> $GITHUB_ENV
       - name: Obter TAG
         run: echo "TAG=$(cat tag.txt)" >> $GITHUB_ENV
       - uses: google-github-actions/auth@v2
