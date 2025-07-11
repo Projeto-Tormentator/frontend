@@ -12,7 +12,6 @@ import { cn } from "@/lib/utils";
 import { 
   type AccentColor, 
   getAccentClasses, 
-  combineAccentClasses 
 } from "@/config/colors";
 
 export type FeatureProps = {
