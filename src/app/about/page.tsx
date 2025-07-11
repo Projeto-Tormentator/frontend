@@ -217,7 +217,7 @@ export default function AboutPage() {
                   Apaixonado por Tormenta20 desde o primeiro contato, sempre tive vontade de ser mais ativo na comunidade, e esse projeto é a realização desse desejo.
                 </p>
                 <p className="text-slate-600 dark:text-slate-400 mb-6">
-                  "Ninguém nunca lê essas citações, por que eu perderia meu tempo escrevendo uma?"
+                  &quot;Ninguém nunca lê essas citações, por que eu perderia meu tempo escrevendo uma?&quot;
                 </p>
                 
                 {/* Social Links */}

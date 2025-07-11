@@ -157,7 +157,7 @@ export default function TermsPage() {
             </h2>
             <div className="prose prose-slate dark:prose-invert max-w-none">
               <p>
-                O Tormentator é fornecido "como está", sem garantias de qualquer tipo. Os desenvolvedores 
+                O Tormentator é fornecido &quot;como está&quot;, sem garantias de qualquer tipo. Os desenvolvedores 
                 não se responsabilizam por:
               </p>
               <ul className="list-disc pl-6 space-y-2">
