@@ -50,6 +50,18 @@ export const PROJECT_CONFIG = {
     privacy: "/privacy",
     terms: "/terms",
     cards: "/cards",
+  },
+
+  terms: {
+    lastUpdate: "11/07/2025",
+    url: "/terms",
+    text: "Termos de Uso"
+  },
+
+  privacy: {
+    lastUpdate: "11/07/2025",
+    url: "/privacy",
+    text: "Política de Privacidade"
   }
 } as const;
 

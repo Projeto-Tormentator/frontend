@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, Shield, Cookie, Lock, MessageSquare, RefreshCw } from "lucide-react";
 import { PROJECT_CONFIG } from "@/config/links";
-import CurrentYear from "@/components/CurrentYear";
 
 export const metadata: Metadata = {
   title: `Política de Privacidade - ${PROJECT_CONFIG.name}`,
@@ -46,12 +45,12 @@ export default function PrivacyPage() {
             <div className="flex items-center gap-3 mb-6">
               <Shield className="h-8 w-8 text-purple-600 dark:text-purple-400" />
               <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100">
-                Política de Privacidade
+                {PROJECT_CONFIG.privacy.text}
               </h1>
             </div>
             
             <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
-              Última atualização: <CurrentYear />
+              Última atualização: {PROJECT_CONFIG.privacy.lastUpdate}
             </p>
           </div>
         </div>
@@ -229,7 +228,7 @@ export default function PrivacyPage() {
             <div className="bg-slate-50 dark:bg-slate-800/50 p-6 rounded-lg">
               <p className="text-slate-600 dark:text-slate-400 text-sm text-center">
                 Esta política de privacidade reflete nosso compromisso com a transparência e
-                privacidade da comunidade de Tormenta 20. Criado por {PROJECT_CONFIG.creator.name}.
+                privacidade da comunidade de Tormenta 20.
               </p>
             </div>
           </section>

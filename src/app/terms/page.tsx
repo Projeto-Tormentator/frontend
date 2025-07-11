@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, Scale, Code, Users, CheckCircle, AlertTriangle, ShieldAlert, GitPullRequest, RefreshCw, MessageCircle } from "lucide-react";
 import { PROJECT_CONFIG } from "@/config/links";
-import CurrentYear from "@/components/CurrentYear";
 
 export const metadata: Metadata = {
   title: `Termos de Uso - ${PROJECT_CONFIG.name}`,
@@ -46,12 +45,12 @@ export default function TermsPage() {
             <div className="flex items-center gap-3 mb-6">
               <Scale className="h-8 w-8 text-purple-600 dark:text-purple-400" />
               <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100">
-                Termos de Uso
+                {PROJECT_CONFIG.terms.text}
               </h1>
             </div>
             
             <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
-              Última atualização: <CurrentYear />
+              Última atualização: {PROJECT_CONFIG.terms.lastUpdate}
             </p>
           </div>
         </div>
@@ -316,14 +315,6 @@ export default function TermsPage() {
           </section>
 
         </div>
-
-        {/* Footer */}
-        <div className="mt-8 text-center">
-          <p className="text-slate-600 dark:text-slate-400">
-            {PROJECT_CONFIG.name} © <CurrentYear /> - Criado por {PROJECT_CONFIG.creator.name}
-          </p>
-        </div>
-
       </div>
     </div>
   );
