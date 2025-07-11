@@ -47,7 +47,7 @@ jobs:
           docker tag tormentator-front:latest $REPO:$TAG
           docker push $REPO:$TAG
           echo "$TAG" > tag.txt
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: image-tag
           path: tag.txt
@@ -62,7 +62,7 @@ jobs:
       REGION: southamerica-east1
       SERVICE: tormentator-front-homolog
     steps:
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with: { name: image-tag }
       - name: Definir REPO
         run: echo "REPO=${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/tormentator-repo/${{ env.SERVICE }}" >> $GITHUB_ENV
@@ -95,7 +95,7 @@ jobs:
       REGION: southamerica-east1
       SERVICE: tormentator-front
     steps:
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with: { name: image-tag }
       - name: Definir REPO
         run: echo "REPO=${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/tormentator-repo/${{ env.SERVICE }}" >> $GITHUB_ENV
