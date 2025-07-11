@@ -32,6 +32,19 @@ export const PROJECT_CONFIG = {
     oficialSite: "https://jamboeditora.com.br/"
   },
   
+  google: {
+    analytics: {
+      enabled: true,
+      description: "Dados anônimos de uso para melhorar a experiência do usuário"
+    },
+    cloudPlatform: {
+      enabled: true,
+      description: "Hospedagem via Firebase Hosting no Google Cloud Platform"
+    },
+    termsOfService: "https://policies.google.com/terms",
+    privacyPolicy: "https://policies.google.com/privacy"
+  },
+
   internal: {
     home: "/",
     privacy: "/privacy",
@@ -58,5 +71,7 @@ export const getCommunityLinks = () => PROJECT_CONFIG.community;
 export const getSupportLinks = () => PROJECT_CONFIG.support;
 
 export const getTormenta20Links = () => PROJECT_CONFIG.tormenta20;
+
+export const getGoogleServices = () => PROJECT_CONFIG.google;
 
 export const getInternalLinks = () => PROJECT_CONFIG.internal;
