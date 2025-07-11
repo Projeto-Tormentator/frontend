@@ -5,9 +5,8 @@ import { ThemeToggler } from "./ThemeToggler";
 import { TormentaFont } from "../Fonts/Tormenta";
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
-import { Menu as MenuIcon, X, Home, ScrollText, Sparkles, Github, Users2, Info } from 'lucide-react';
+import { Menu as MenuIcon, X, Home, Github, Users2, Info } from 'lucide-react';
 import { GradientIcon } from "./Logo";
-import { useTheme } from "next-themes";
 import { PROJECT_CONFIG } from "@/config/links";
 import CurrentYear from "@/components/CurrentYear";
 
@@ -27,7 +26,6 @@ const MenuItems = [
 export default function Navbar() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { theme } = useTheme();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
