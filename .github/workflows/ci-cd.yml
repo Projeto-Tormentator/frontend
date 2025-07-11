@@ -79,7 +79,7 @@ jobs:
           service: ${{ env.SERVICE }}
           image: ${{ env.REPO }}:${{ env.TAG }}
           region: ${{ env.REGION }}
-          allow_unauthenticated: true
+          flags: --allow-unauthenticated
 
   deploy-prod:
     name: 🚀 Deploy Produção
@@ -112,4 +112,4 @@ jobs:
           service: ${{ env.SERVICE }}
           image: ${{ env.REPO }}:${{ env.TAG }}
           region: ${{ env.REGION }}
-          allow_unauthenticated: true
+          flags: --allow-unauthenticated
