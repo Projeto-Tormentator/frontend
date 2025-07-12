@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { PROJECT_CONFIG } from "@/config/links";
 import { Code, Shield, Star, Users } from "lucide-react";
 import Link from "next/link";
+import { FaDiscord } from "react-icons/fa6";
 
 export default function Community() {
   return (
@@ -57,7 +58,7 @@ export default function Community() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href={PROJECT_CONFIG.community.discordInvite} target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300">
-                <Users className="h-5 w-5 mr-2" />
+                <FaDiscord className="h-5 w-5 mr-2" />
                 Entrar no Discord
               </Button>
             </Link>
