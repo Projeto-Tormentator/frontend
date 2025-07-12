@@ -5,10 +5,11 @@ import { ThemeToggler } from "./ThemeToggler";
 import { TormentaFont } from "../Fonts/Tormenta";
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
-import { Menu as MenuIcon, X, Home, Github, Users2, Info } from 'lucide-react';
+import { Menu as MenuIcon, X, Home, Github, Info } from 'lucide-react';
 import { GradientIcon } from "./Logo";
 import { PROJECT_CONFIG } from "@/config/links";
 import CurrentYear from "@/components/CurrentYear";
+import { FaDiscord } from "react-icons/fa6";
 
 const MenuItems = [
   {
@@ -81,7 +82,7 @@ export default function Navbar() {
                 className="p-2 rounded-lg text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-slate-800 transition-all duration-200"
                 title="Discord"
               >
-                <Users2 className="h-5 w-5" />
+                <FaDiscord className="h-5 w-5" />
               </Link>
               <div className="ml-2 pl-2 border-l border-purple-200/50 dark:border-slate-600/50">
                 <ThemeToggler />
@@ -145,7 +146,7 @@ export default function Navbar() {
                     className="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-slate-700 transition-all duration-200"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    <Users2 className="h-4 w-4" />
+                    <FaDiscord className="h-4 w-4" />
                     <span className="text-sm">Discord</span>
                   </Link>
                 </div>
