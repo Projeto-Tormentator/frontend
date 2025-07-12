@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { Github, MessageCircle, Heart, ExternalLink, Users, Code } from "lucide-react";
+import { Github, Heart, ExternalLink, Users, Code } from "lucide-react";
 import { PROJECT_CONFIG } from "@/config/links";
 import CurrentYear from "../CurrentYear";
+import { FaDiscord } from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -48,7 +49,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-purple-100 dark:text-slate-300 hover:text-white dark:hover:text-white transition-colors duration-200 group"
               >
-                <MessageCircle className="h-4 w-4 group-hover:scale-110 transition-transform duration-200" />
+                <FaDiscord className="h-4 w-4 group-hover:scale-110 transition-transform duration-200" />
                 <span>Discord da Comunidade</span>
                 <ExternalLink className="h-3 w-3 opacity-60" />
               </Link>
